@@ -4,3 +4,6 @@
 .vs/ftwd_mmogs/v15/ipch/AutoPCH/FTWD_MMOGS-1eaccac4/MMOGS-27947815/MMOGS.ipch
 *.ipch
 *.VC.db
+windows/.vs/ftwd_mmogs/v15/.suo
+windows/.vs/ftwd_mmogs/v15/Solution.VC.db-shm
+windows/.vs/ftwd_mmogs/v15/Solution.VC.db-wal
