@@ -1,0 +1,13 @@
+﻿  ErrMsgs-ansi-rus.cpp
+..\..\lib\exception\ErrMsgs-ansi-rus.cpp(3): warning C4273: ftwd::ErrMsgs: несовместимая компоновка dll
+  D:\workspace\ftwd_mmogs\includes\ftwd/errcodes.h(48): note: см. предыдущее определение "ErrMsgs"
+  exception.cpp
+..\..\lib\exception\exception.cpp(5): warning C4996: 'gmtime': This function or variable may be unsafe. Consider using gmtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\ucrt\time.h(495): note:  см. объявление "gmtime"
+..\..\lib\exception\exception.cpp(72): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\ucrt\stdio.h(207): note:  см. объявление "fopen"
+     Создается библиотека D:\workspace\ftwd_mmogs\windows\Release\exception.lib и объект D:\workspace\ftwd_mmogs\windows\Release\exception.exp
+  Создание кода
+  All 23 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Создание кода завершено
+  exception.vcxproj -> D:\workspace\ftwd_mmogs\windows\Release\exception.dll

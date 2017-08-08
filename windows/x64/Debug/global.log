@@ -1,0 +1,6 @@
+﻿  global.cpp
+d:\workspace\ftwd_mmogs\lib\global\global.cpp(40): warning C4996: 'gmtime': This function or variable may be unsafe. Consider using gmtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\time.h(495): note:  см. объявление "gmtime"
+     ╤ючфрхЄё  сшсышюЄхър D:\workspace\ftwd_mmogs\windows\x64\Debug\global.lib ш юс·хъЄ D:\workspace\ftwd_mmogs\windows\x64\Debug\global.exp
+  global.vcxproj -> D:\workspace\ftwd_mmogs\windows\x64\Debug\global.dll
+  global.vcxproj -> D:\workspace\ftwd_mmogs\windows\x64\Debug\global.pdb (Partial PDB)

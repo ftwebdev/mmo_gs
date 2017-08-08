@@ -1,0 +1,4 @@
+﻿  mmogs.cpp
+d:\workspace\ftwd_mmogs\source\mmogs.cpp(9): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  ftwd_mmogs.vcxproj -> D:\workspace\ftwd_mmogs\windows\x64\Debug\ftwd_mmogs.exe
+  ftwd_mmogs.vcxproj -> D:\workspace\ftwd_mmogs\windows\x64\Debug\ftwd_mmogs.pdb (Partial PDB)

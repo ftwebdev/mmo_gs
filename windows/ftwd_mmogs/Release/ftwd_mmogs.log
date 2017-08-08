@@ -1,0 +1,6 @@
+﻿  mmogs.cpp
+..\..\source\mmogs.cpp(8): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  Создание кода
+  Создание кода завершено
+  All 4 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  ftwd_mmogs.vcxproj -> D:\workspace\ftwd_mmogs\windows\Release\ftwd_mmogs.exe
