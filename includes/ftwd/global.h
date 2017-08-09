@@ -63,7 +63,7 @@ namespace ftwd {
 	GLOBALDLL_API long long strpos(const char* const _Src, const char _Tpl, const size_t _Offset = 0, const size_t _SrcLen = 0);
 	GLOBALDLL_API long long firstof(const char* const _Src, const char* const _Tpl, const size_t _Offset = 0, const size_t _SrcLen = 0);
 	// find position of closest to the '_SrcOff'{0} next not escaped with '_Esc'{'\'} character
-	GLOBALDLL_API long long strpos_ue(const char* const _Src, const size_t _SrcLen, const char const _Tpl, const size_t _SrcOff = 0, const char _Esc = '\\');
+	GLOBALDLL_API long long strpos_ue(const char* const _Src, const size_t _SrcLen, const char _Tpl, const size_t _SrcOff = 0, const char _Esc = '\\');
 	// cuts given char from string
 	GLOBALDLL_API errcodes cutChar(char* const _Src, size_t &_SrcLen, const char _Tpl, const size_t _Offset = 0, const size_t _Limit = 0);
 	GLOBALDLL_API errcodes cutNQChar(char* const _Src, const char _Tpl, const char* const _qTypes = "\"'`");

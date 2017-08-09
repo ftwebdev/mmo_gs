@@ -137,7 +137,7 @@ namespace ftwd {
 			}
 		}
 		// _Src != nullptr
-		long long strpos_ue(const char* const _Src, const size_t _SrcLen, const char const _Tpl, const size_t _SrcOff, const char _Esc = '\\') {
+		long long strpos_ue(const char* const _Src, const size_t _SrcLen, const char _Tpl, const size_t _SrcOff, const char _Esc = '\\') {
 			if (_Src[_SrcOff] != _Tpl) {
 				char prev = _Src[_SrcOff];
 				for (size_t srcPos = _SrcOff + 1; srcPos < _SrcLen; srcPos++) {
@@ -476,7 +476,7 @@ namespace ftwd {
 		return -1;
 	}
 	// find position of closest to the '_SrcOff' next not escaped with '_Esc' character
-	long long strpos_ue(const char* const _Src, const size_t _SrcLen, const char const _Tpl, const size_t _SrcOff, const char _Esc) {
+	long long strpos_ue(const char* const _Src, const size_t _SrcLen, const char _Tpl, const size_t _SrcOff, const char _Esc) {
 		if (_Src) {
 			if (_Src[_SrcOff] != _Tpl) {
 				char prev = _Src[_SrcOff];
