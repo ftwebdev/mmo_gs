@@ -5,10 +5,17 @@
 	#else
 		#define PROGRESSBARDLL_API __declspec(dllimport)
 	#endif //PROGRESSBARDLL_EXPORTS
+	
+	#include <Windows.h>
+	#include <io.h>
+	#include <ctime>
 #else
 	#define PROGRESSBARDLL_API
+	#include <unistd.h>
+	#include <time.h>
 #endif // _WIN32
 
+#include <random>
 #include <iostream>
 
 namespace ftwd {
@@ -34,6 +41,24 @@ namespace ftwd {
         void refresh() const;
         void init();
     public:
+		enum conscolor {
+			C_Black,
+			C_dBlue,
+			C_dGreen,
+			C_dCayene,
+			C_dRed,
+			C_dPurple,
+			C_dBrown,
+			C_Gray,
+			C_dGray,
+			C_Blue,
+			C_Green,
+			C_Cayene,
+			C_Red,
+			C_Purple,
+			C_Yellow,
+			C_White
+		};
 		explicit progressbar(size_t total, size_t blocks, byte progrescolor = 15);
         ~progressbar();
         void now(size_t i);

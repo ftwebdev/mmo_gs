@@ -144,6 +144,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\..\includes\ftwd\progressbar.h" />
+    <ClInclude Include="..\..\lib\progresbar\unix.h" />
     <ClInclude Include="..\..\lib\progresbar\win.h" />
   </ItemGroup>
   <ItemGroup>

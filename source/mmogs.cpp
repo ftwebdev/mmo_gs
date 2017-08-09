@@ -1,8 +1,14 @@
 //#include "ftwd/mmogs.h"
 //#include "tpl/global.h"
-#include <unistd.h>
-#include <time.h>
-//#include <Windows.h>
+
+#ifdef _WIN32
+	#include <Windows.h>
+	#include <io.h>
+	#include <ctime>
+#else
+	#include <unistd.h>
+	#include <time.h>
+#endif //_WIN32
 #include <random>
 
 namespace ftwd {
@@ -12,22 +18,17 @@ namespace ftwd {
 };
 
 int main(){
-	char test[] = "Hello World! ";
+	char test[] = "Hello World!\n";
 	const char ret[] = " \r";
 	char spin[] = { "\\|/|" };
 	size_t len = sizeof(test) - 1;
 	size_t slen = sizeof(spin) - 1;
 	size_t spos = 0;
 	struct timespec ts, tw = { 0, 500 };
-	while (true) {
-		if (spos == slen)
-			spos = 0;
-		write(1, ret + 1, 1);
-		write(1, spin + spos, 1);
-		spos++;
-		write(1, ret, 1);
+	HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
+	for (byte i = 0; i < 16; i++) {
+		SetConsoleTextAttribute(handle, i);
 		write(1, test, len);
-		nanosleep(&tw, &ts);
 	}
 #ifdef _WIN32
     system("pause");

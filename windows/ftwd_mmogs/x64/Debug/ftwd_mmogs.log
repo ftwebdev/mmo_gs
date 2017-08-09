@@ -1,4 +1,7 @@
 ﻿  mmogs.cpp
-d:\workspace\ftwd_mmogs\source\mmogs.cpp(9): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-  ftwd_mmogs.vcxproj -> D:\workspace\ftwd_mmogs\windows\x64\Debug\ftwd_mmogs.exe
-  ftwd_mmogs.vcxproj -> D:\workspace\ftwd_mmogs\windows\x64\Debug\ftwd_mmogs.pdb (Partial PDB)
+d:\workspace\mmo_gs\source\mmogs.cpp(31): warning C4267: аргумент: преобразование из "size_t" в "unsigned int"; возможна потеря данных
+d:\workspace\mmo_gs\source\mmogs.cpp(31): warning C4996: 'write': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _write. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\corecrt_io.h(558): note:  см. объявление "write"
+d:\workspace\mmo_gs\source\mmogs.cpp(27): warning C4101: ts: неиспользованная локальная переменная
+  ftwd_mmogs.vcxproj -> D:\workspace\mmo_gs\windows\x64\Debug\ftwd_mmogs.exe
+  ftwd_mmogs.vcxproj -> D:\workspace\mmo_gs\windows\x64\Debug\ftwd_mmogs.pdb (Partial PDB)
