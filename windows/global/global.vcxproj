@@ -163,6 +163,8 @@
     <ClInclude Include="..\..\includes\tpl\_tbuff.h" />
     <ClInclude Include="..\..\lib\global\dir_w.h" />
     <ClInclude Include="..\..\lib\global\dir_x.h" />
+    <ClInclude Include="..\..\lib\global\uni.h" />
+    <ClInclude Include="..\..\lib\global\win.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\exception\exception.vcxproj">

@@ -1,5 +1,9 @@
 #pragma once
 
+/*
+	global used functions and classes
+*/
+
 #include <cstdio>
 #include <iostream>
 #include <cstdlib>
@@ -163,4 +167,25 @@ namespace ftwd {
 			return _cstr.data();
 		}
 	};
+
+	/* Console color set */
+	enum conscolor {
+		C_Black,
+		C_dBlue,
+		C_dGreen,
+		C_dCayene,
+		C_dRed,
+		C_dPurple,
+		C_dBrown,
+		C_Gray,
+		C_dGray,
+		C_Blue,
+		C_Green,
+		C_Cayene,
+		C_Red,
+		C_Purple,
+		C_Yellow,
+		C_White
+	};
+	void GLOBALDLL_API setConsTextColor(const conscolor _Color);
 }

@@ -3,6 +3,15 @@
 #include "ftwd/global.h"
 #include "tpl/global.h"
 
+#ifdef _WIN32
+	#include <Windows.h>
+	#include "win.h"
+#else
+	#include <unistd.h>
+	#include <dirent.h>
+	#include "uni.h"
+#endif //_WIN32
+
 namespace ftwd {
 	/************************ Global enums, flags, types and constants ************************/
 	/* a definition of class dlGlobal */

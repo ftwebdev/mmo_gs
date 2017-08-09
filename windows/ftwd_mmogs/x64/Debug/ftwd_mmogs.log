@@ -1,7 +1,9 @@
 ﻿  mmogs.cpp
-d:\workspace\mmo_gs\source\mmogs.cpp(31): warning C4267: аргумент: преобразование из "size_t" в "unsigned int"; возможна потеря данных
-d:\workspace\mmo_gs\source\mmogs.cpp(31): warning C4996: 'write': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _write. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\corecrt_io.h(558): note:  см. объявление "write"
-d:\workspace\mmo_gs\source\mmogs.cpp(27): warning C4101: ts: неиспользованная локальная переменная
+d:\workspace\mmo_gs\includes\tpl\global.h(333): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1772): note:  см. объявление "sprintf"
+d:\workspace\mmo_gs\includes\ftwd\global.h(41): warning C4091: __declspec(dllimport): пропускается слева от "ftwd::dlGlobal", когда ни одна переменная не объявлена
+d:\workspace\mmo_gs\includes\ftwd\global.h(66): warning C4114: множественное использование одного и того же квалификатора типа
+d:\workspace\mmo_gs\includes\ftwd\global.h(95): warning C4091: __declspec(dllimport): пропускается слева от "ftwd::refcounter", когда ни одна переменная не объявлена
+d:\workspace\mmo_gs\includes\ftwd\global.h(169): warning C4521: ftwd::string: заданы несколько конструкторов копии
   ftwd_mmogs.vcxproj -> D:\workspace\mmo_gs\windows\x64\Debug\ftwd_mmogs.exe
   ftwd_mmogs.vcxproj -> D:\workspace\mmo_gs\windows\x64\Debug\ftwd_mmogs.pdb (Partial PDB)

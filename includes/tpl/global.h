@@ -1,4 +1,7 @@
 #pragma once
+/*
+Global templates
+*/
 
 #include <cstdlib>
 #include <cstdio>
@@ -6,6 +9,8 @@
 #include <iostream>
 #include "ftwd/types.h"
 #include "ftwd/exception.h"
+
+/* template class used as 'nullptr' */
 class _null {
 public:
 	template<typename T>
@@ -14,6 +19,7 @@ public:
 	}
 };
 _null null;
+
 namespace ftwd {
 	
 	/* namespace used for not secure functions */

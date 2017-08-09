@@ -1,6 +1,15 @@
 ﻿  global.cpp
-d:\workspace\ftwd_mmogs\lib\global\global.cpp(40): warning C4996: 'gmtime': This function or variable may be unsafe. Consider using gmtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+d:\workspace\mmo_gs\includes\tpl\global.h(333): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1772): note:  см. объявление "sprintf"
+d:\workspace\mmo_gs\includes\ftwd\global.h(41): warning C4091: __declspec(dllexport): пропускается слева от "ftwd::dlGlobal", когда ни одна переменная не объявлена
+d:\workspace\mmo_gs\includes\ftwd\global.h(66): warning C4114: множественное использование одного и того же квалификатора типа
+d:\workspace\mmo_gs\includes\ftwd\global.h(95): warning C4091: __declspec(dllexport): пропускается слева от "ftwd::refcounter", когда ни одна переменная не объявлена
+d:\workspace\mmo_gs\includes\ftwd\global.h(169): warning C4521: ftwd::string: заданы несколько конструкторов копии
+d:\workspace\mmo_gs\lib\global\global.cpp(65): warning C4996: 'gmtime': This function or variable may be unsafe. Consider using gmtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\time.h(495): note:  см. объявление "gmtime"
-     ╤ючфрхЄё  сшсышюЄхър D:\workspace\ftwd_mmogs\windows\x64\Debug\global.lib ш юс·хъЄ D:\workspace\ftwd_mmogs\windows\x64\Debug\global.exp
-  global.vcxproj -> D:\workspace\ftwd_mmogs\windows\x64\Debug\global.dll
-  global.vcxproj -> D:\workspace\ftwd_mmogs\windows\x64\Debug\global.pdb (Partial PDB)
+d:\workspace\mmo_gs\lib\global\global.cpp(137): warning C4114: множественное использование одного и того же квалификатора типа
+d:\workspace\mmo_gs\lib\global\global.cpp(476): warning C4114: множественное использование одного и того же квалификатора типа
+d:\workspace\mmo_gs\lib\global\global.cpp(135): warning C4715: ftwd::global_ns::strpos: значение возвращается не при всех путях выполнения
+     ╤ючфрхЄё  сшсышюЄхър D:\workspace\mmo_gs\windows\x64\Debug\global.lib ш юс·хъЄ D:\workspace\mmo_gs\windows\x64\Debug\global.exp
+  global.vcxproj -> D:\workspace\mmo_gs\windows\x64\Debug\global.dll
+  global.vcxproj -> D:\workspace\mmo_gs\windows\x64\Debug\global.pdb (Partial PDB)

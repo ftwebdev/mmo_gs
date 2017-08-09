@@ -1,5 +1,7 @@
 #pragma once
+
 namespace ftwd {
+	/* sets console text color */
 	namespace _prbar {
 		const char* const colors[] = {
 		    /* black */ "\033[0;30m",
@@ -20,7 +22,7 @@ namespace ftwd {
 		    /* White */ "\033[1;38m"
 		};
 	};
-	void setOutputColor(progressbar::conscolor _TColor) {
-		write(1, _prbar::colors[_TColor], 7);
+	void setConsTextColor(conscolor _TColor) {
+		write(1, _prbar::colors[_TColor % 16], 7);
 	}
 };
