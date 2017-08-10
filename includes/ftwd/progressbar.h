@@ -12,11 +12,8 @@
 	#include <time.h>
 #endif // _WIN32
 
-#include <random>
-#include <iostream>
-
 namespace ftwd {
-	PROGRESSBARDLL_API class progressbar {
+	class progressbar {
 		typedef unsigned char byte;
 		// char buffer(will be displayed)
 		char* bar;
@@ -38,10 +35,10 @@ namespace ftwd {
         void refresh() const;
         void init();
     public:
-		explicit progressbar(size_t total, size_t blocks, byte progrescolor = 15);
-        ~progressbar();
-        void now(size_t i);
-        void reset(size_t total);
-        void clearout();
+		PROGRESSBARDLL_API explicit progressbar(size_t total, size_t blocks, byte progrescolor = 15);
+        PROGRESSBARDLL_API ~progressbar();
+        PROGRESSBARDLL_API void now(size_t i);
+        PROGRESSBARDLL_API void reset(size_t total);
+        PROGRESSBARDLL_API void clearout();
     };
 };
