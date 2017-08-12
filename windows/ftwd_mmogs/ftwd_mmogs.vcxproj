@@ -159,6 +159,9 @@
     <ProjectReference Include="..\global\global.vcxproj">
       <Project>{de0f3094-d569-429a-a3c7-c79674f9cedb}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\progresbar\progresbar.vcxproj">
+      <Project>{b219889b-34f0-4e24-b288-83b38d68f25c}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

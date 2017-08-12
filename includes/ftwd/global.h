@@ -51,7 +51,6 @@ namespace ftwd {
     size_t GLOBALDLL_API fleft(FILE* pFile);
     void GLOBALDLL_API _exit(const int);
     void GLOBALDLL_API _exit(const ftwd::exception &e);
-
 	/* Default String Functions */
 	GLOBALDLL_API char tolower(char const _C);
 	GLOBALDLL_API char toupper(char const _C);

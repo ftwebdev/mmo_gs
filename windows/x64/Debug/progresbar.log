@@ -1,0 +1,25 @@
+﻿  progressbar.cpp
+d:\workspace\mmo_gs\includes\tpl\global.h(354): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1772): note:  см. объявление "sprintf"
+d:\workspace\mmo_gs\includes\ftwd\global.h(41): warning C4091: __declspec(dllimport): пропускается слева от "ftwd::dlGlobal", когда ни одна переменная не объявлена
+d:\workspace\mmo_gs\includes\ftwd\global.h(94): warning C4091: __declspec(dllimport): пропускается слева от "ftwd::refcounter", когда ни одна переменная не объявлена
+d:\workspace\mmo_gs\includes\ftwd\global.h(168): warning C4521: ftwd::string: заданы несколько конструкторов копии
+d:\workspace\mmo_gs\lib\progresbar\progressbar.cpp(106): warning C4267: аргумент: преобразование из "size_t" в "unsigned int"; возможна потеря данных
+d:\workspace\mmo_gs\lib\progresbar\progressbar.cpp(121): warning C4244: аргумент: преобразование "__int64" в "unsigned int", возможна потеря данных
+d:\workspace\mmo_gs\lib\progresbar\progressbar.cpp(124): warning C4267: аргумент: преобразование из "size_t" в "unsigned int"; возможна потеря данных
+d:\workspace\mmo_gs\lib\progresbar\progressbar.cpp(106): warning C4996: 'write': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _write. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\corecrt_io.h(558): note:  см. объявление "write"
+d:\workspace\mmo_gs\lib\progresbar\progressbar.cpp(107): warning C4996: 'write': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _write. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\corecrt_io.h(558): note:  см. объявление "write"
+d:\workspace\mmo_gs\lib\progresbar\progressbar.cpp(115): warning C4996: 'write': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _write. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\corecrt_io.h(558): note:  см. объявление "write"
+d:\workspace\mmo_gs\lib\progresbar\progressbar.cpp(121): warning C4996: 'write': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _write. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\corecrt_io.h(558): note:  см. объявление "write"
+d:\workspace\mmo_gs\lib\progresbar\progressbar.cpp(124): warning C4996: 'write': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _write. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\corecrt_io.h(558): note:  см. объявление "write"
+     Создается библиотека D:\workspace\mmo_gs\windows\x64\Debug\progresbar.lib и объект D:\workspace\mmo_gs\windows\x64\Debug\progresbar.exp
+progressbar.obj : error LNK2019: ссылка на неразрешенный внешний символ "__declspec(dllimport) public: __cdecl ftwd::exception::exception(enum ftwd::errcodes,char const * const,char const * const,char const * const)" (__imp_??0exception@ftwd@@QEAA@W4errcodes@1@QEBD11@Z) в функции "unsigned __int64 __cdecl ftwd::strlen<char>(char const * const)" (??$strlen@D@ftwd@@YA_KQEBD@Z)
+progressbar.obj : error LNK2019: ссылка на неразрешенный внешний символ "__declspec(dllimport) void __cdecl ftwd::setConsTextColor(enum ftwd::conscolor)" (__imp_?setConsTextColor@ftwd@@YAXW4conscolor@1@@Z) в функции "private: void __cdecl ftwd::progressbar::refresh(void)" (?refresh@progressbar@ftwd@@AEAAXXZ)
+progressbar.obj : error LNK2001: неразрешенный внешний символ ""public: __cdecl ftwd::exception::exception(class ftwd::exception const &)" (??0exception@ftwd@@QEAA@AEBV01@@Z)"
+progressbar.obj : error LNK2001: неразрешенный внешний символ ""public: virtual __cdecl ftwd::exception::~exception(void)" (??1exception@ftwd@@UEAA@XZ)"
+D:\workspace\mmo_gs\windows\x64\Debug\progresbar.dll : fatal error LNK1120: неразрешенных внешних элементов: 4

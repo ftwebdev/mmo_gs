@@ -1,9 +1,12 @@
 ﻿  mmogs.cpp
-d:\workspace\mmo_gs\includes\tpl\global.h(333): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+d:\workspace\mmo_gs\includes\tpl\global.h(354): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1772): note:  см. объявление "sprintf"
 d:\workspace\mmo_gs\includes\ftwd\global.h(41): warning C4091: __declspec(dllimport): пропускается слева от "ftwd::dlGlobal", когда ни одна переменная не объявлена
-d:\workspace\mmo_gs\includes\ftwd\global.h(66): warning C4114: множественное использование одного и того же квалификатора типа
-d:\workspace\mmo_gs\includes\ftwd\global.h(95): warning C4091: __declspec(dllimport): пропускается слева от "ftwd::refcounter", когда ни одна переменная не объявлена
-d:\workspace\mmo_gs\includes\ftwd\global.h(169): warning C4521: ftwd::string: заданы несколько конструкторов копии
-  ftwd_mmogs.vcxproj -> D:\workspace\mmo_gs\windows\x64\Debug\ftwd_mmogs.exe
-  ftwd_mmogs.vcxproj -> D:\workspace\mmo_gs\windows\x64\Debug\ftwd_mmogs.pdb (Partial PDB)
+d:\workspace\mmo_gs\includes\ftwd\global.h(94): warning C4091: __declspec(dllimport): пропускается слева от "ftwd::refcounter", когда ни одна переменная не объявлена
+d:\workspace\mmo_gs\includes\ftwd\global.h(168): warning C4521: ftwd::string: заданы несколько конструкторов копии
+d:\workspace\mmo_gs\includes\ftwd\progressbar.h(29): warning C4091: __declspec(dllimport): пропускается слева от "ftwd::BarCfg", когда ни одна переменная не объявлена
+d:\workspace\mmo_gs\includes\ftwd\progressbar.h(66): warning C4091: __declspec(dllimport): пропускается слева от "ftwd::progressbar", когда ни одна переменная не объявлена
+mmogs.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: __cdecl ftwd::progressbar::progressbar(unsigned __int64,char const * const,struct ftwd::BarCfg const * const)" (??0progressbar@ftwd@@QEAA@_KQEBDQEBUBarCfg@1@@Z) в функции main
+mmogs.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: __cdecl ftwd::progressbar::~progressbar(void)" (??1progressbar@ftwd@@QEAA@XZ) в функции main
+mmogs.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: void __cdecl ftwd::progressbar::now(unsigned __int64)" (?now@progressbar@ftwd@@QEAAX_K@Z) в функции main
+D:\workspace\mmo_gs\windows\x64\Debug\ftwd_mmogs.exe : fatal error LNK1120: неразрешенных внешних элементов: 3

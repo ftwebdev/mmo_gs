@@ -1,12 +1,5 @@
-﻿  exception.cpp
-d:\workspace\mmo_gs\lib\exception\exception.cpp(5): warning C4996: 'gmtime': This function or variable may be unsafe. Consider using gmtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\time.h(495): note:  см. объявление "gmtime"
-d:\workspace\mmo_gs\lib\exception\exception.cpp(72): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(207): note:  см. объявление "fopen"
-  ErrMsgs-ansi-rus.cpp
+﻿  ErrMsgs-ansi-rus.cpp
 d:\workspace\mmo_gs\lib\exception\errmsgs-ansi-rus.cpp(3): warning C4273: ftwd::ErrMsgs: несовместимая компоновка dll
   d:\workspace\mmo_gs\includes\ftwd\errcodes.h(49): note: см. предыдущее определение "ErrMsgs"
-  Создание кода...
-     Создается библиотека D:\workspace\mmo_gs\windows\x64\Debug\exception.lib и объект D:\workspace\mmo_gs\windows\x64\Debug\exception.exp
   exception.vcxproj -> D:\workspace\mmo_gs\windows\x64\Debug\exception.dll
   exception.vcxproj -> D:\workspace\mmo_gs\windows\x64\Debug\exception.pdb (Partial PDB)

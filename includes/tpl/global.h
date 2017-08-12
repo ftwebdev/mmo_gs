@@ -48,7 +48,28 @@ namespace ftwd {
 		}
 		return pos;
     }
-
+	namespace global_ns {
+		template<typename T>
+		T* dcopy(const T* const _Src, const size_t _Len) {
+			T* buff = new T[_Len + 1];
+			for (size_t i = 0; i < _Len; i++)
+				buff[i] = _Src[i];
+			buff[_Len] = 0;
+			return buff;
+		}
+	};
+	template<typename T>
+	T* dcopy(const T* const _Src, const size_t _Len = 0) {
+		T* buff = nullptr;
+		if (_Src) {
+			size_t len = (_Len ? _Len : global_ns::strlen(_Src));
+			T* buff = new T[_Len + 1];
+			for (size_t i = 0; i < _Len; i++)
+				buff[i] = _Src[i];
+			buff[_Len] = 0;
+		}
+		return buff;
+	}
 	/* zalloc
 		returns pointer to byte array filled with 0 */
 	namespace global_ns {
