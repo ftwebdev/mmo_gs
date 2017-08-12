@@ -8,7 +8,7 @@ int main(){
 	size_t size = 100;
 	progressbar bar(size, testMsg);
 	for (size_t i = 0; i < size; i++) {
-		Sleep(500);
+		sleep(1);
 		bar.now(i);
 	}
 #ifdef _WIN32

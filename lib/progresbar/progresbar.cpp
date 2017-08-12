@@ -4,7 +4,7 @@
 #ifdef _WIN32
 	#include "io.h"
 #else
-	#include <unistd>
+	#include <unistd.h>
 #endif // _WIN32
 
 namespace ftwd {
@@ -90,7 +90,7 @@ namespace ftwd {
 			NextPercent += PercentSize;
 		}
 		if (CurUnit == NextBlock) {
-			if (offsets.ActiveBlock < offsets.LastBlock) {
+			if (offsets.ActiveBlock < offsets.TrailingScope) {
 				offsets.ActiveBlock += 1;
 			}
 			NextBlock += BlockSize;

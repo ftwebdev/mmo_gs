@@ -2,8 +2,8 @@
 ########## main programm ##########
 ###################################
 
-mmogs: ./lib/linux/libftwd-global.so ./obj/mmogs.o
-	g++ ./obj/mmogs.o -I./includes/ -L./lib/linux/ -lftwd-global -lftwd-exc -lftwd-excmsgs -o mmogs
+mmogs: ./lib/linux/libftwd-global.so ./lib/linux/libftwd-progresbar.so ./obj/mmogs.o
+	g++ ./obj/mmogs.o -I./includes/ -L./lib/linux/ -lftwd-global -lftwd-exc -lftwd-progresbar -lftwd-excmsgs -o mmogs
 
 ./obj/mmogs.o:
 	g++ -c ./source/mmogs.cpp -I./includes/ -std=c++11 -o ./obj/mmogs.o
@@ -39,6 +39,12 @@ locale-errmsgs-utf8-rus:
 
 ./obj/global.o:
 	g++ -fPIC -std=c++11 -c ./lib/global/global.cpp -I./includes/ -o ./obj/global.o
+
+./lib/linux/libftwd-progresbar.so: ./obj/progresbar.o
+	g++ -shared ./obj/progresbar.o -I./includes/ -L./lib/linux/ -lftwd-exc -lftwd-global -o ./lib/linux/libftwd-progresbar.so
+
+./obj/progresbar.o:
+	g++ -fPIC -std=c++11 -c ./lib/progresbar/progresbar.cpp -I./includes/ -o ./obj/progresbar.o
 
 #####################################################################
 ########### installing(copying shared libs to '/usr/lib') ###########
