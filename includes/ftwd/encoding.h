@@ -3,21 +3,10 @@
 #include <cstdlib>
 #include <iostream>
 
-#ifdef _WIN32
-	#ifdef CHARLIBDLL_EXPORT
-		#define CHARLIBDLL_API __declspec(dllexport)
-	#elif _WIN32
-		#define CHARLIBDLL_API __declspec(dllexport)
-	#endif // !CHARLIBDLL_EXPORT
-#else
-	#define CHARLIBDLL_API
-#endif // !_WIN32
-
 #include "ftwd/enctypes.h"
 #include "ftwd/CharLib.h"
 #include "tpl/BaseDynamicBuffer.h"
-#include "tpl/glob.h"
-//#include "global.h"
+#include "tpl/global.h"
 
 /**
 * @version: 1.1
@@ -36,7 +25,7 @@ namespace ftwd {
 
 	class encoding {
 	public:
-		errcodes CHARLIBDLL_API convert(enctypes _Current, enctypes _Target, byte* &_SourceString, size_t &TotalBytes, bool addMarker = false) const;
+		static errcodes CHARLIBDLL_API convert(enctypes _Current, enctypes _Target, byte* &_SourceString, size_t &TotalBytes, bool addMarker = false);
 	};
 	
 	extern const qword CHARLIBDLL_API EncMarkers[];
@@ -45,17 +34,18 @@ namespace ftwd {
 		class _encoding {
 			friend encoding;
 			enctypes _type;
-			_encoding(const encoding &Src);
+			_encoding(const _encoding &Src);
 		protected:
-			virtual chlib::EncChar ansiToEncChar(const char _Src) const final;
-			virtual chlib::EncChar encodedToEncChar(const byte* const _Source, size_t &_SrcOffset) const;
-			virtual size_t countEncCharBufferSize(const void* _Buffer, const size_t _BuffSize) const;
-			virtual errcodes addBOM(FILE* pFile) const final;
+			CHARLIBDLL_API virtual chlib::EncChar ansiToEncChar(const char _Src) const final;
+			CHARLIBDLL_API virtual chlib::EncChar encodedToEncChar(const byte* const _Source, size_t &_SrcOffset) const;
+			CHARLIBDLL_API virtual size_t countEncCharBufferSize(const void* _Buffer, const size_t _BuffSize) const;
+			CHARLIBDLL_API virtual errcodes addBOM(FILE* pFile) const final;
 		public:
-			virtual _encoding& operator=(const _encoding &_Src) final;
-			virtual _encoding& operator=(const enctypes _EncType) final;
-			explicit _encoding(const enctypes _type = EncUnknown);
-			virtual ~_encoding();
+			CHARLIBDLL_API virtual _encoding& operator=(const _encoding &_Src) final;
+			CHARLIBDLL_API virtual _encoding& operator=(const enctypes _EncType) final;
+			CHARLIBDLL_API _encoding();
+			CHARLIBDLL_API _encoding(const enctypes _type);
+			CHARLIBDLL_API virtual ~_encoding();
 		};
 
 		class UTF8 : public _encoding {
@@ -64,8 +54,8 @@ namespace ftwd {
 			virtual chlib::EncChar encodedToEncChar(const byte* const _Source, size_t &_SrcOffset) const;
 			virtual size_t countEncCharBufferSize(const void* _Buffer, const size_t _BuffSize) const;
 		public:
-			UTF8();
-			~UTF8();
+			CHARLIBDLL_API UTF8();
+			CHARLIBDLL_API ~UTF8();
 		};
 
 		class UCS2BE : public _encoding {
@@ -74,8 +64,8 @@ namespace ftwd {
 			virtual chlib::EncChar encodedToEncChar(const byte* const _Source, size_t &_SrcOffset) const;
 			virtual size_t countEncCharBufferSize(const void* _Buffer, const size_t _BuffSize) const;
 		public:
-			UCS2BE();
-			~UCS2BE();
+			CHARLIBDLL_API UCS2BE();
+			CHARLIBDLL_API ~UCS2BE();
 		};
 
 		class UCS2LE : public _encoding {
@@ -84,23 +74,24 @@ namespace ftwd {
 			virtual chlib::EncChar encodedToEncChar(const byte* const _Source, size_t &_SrcOffset) const;
 			virtual size_t countEncCharBufferSize(const void* _Buffer, const size_t _BuffSize) const;
 		public:
-			UCS2LE();
-			~UCS2LE();
+			CHARLIBDLL_API UCS2LE();
+			CHARLIBDLL_API ~UCS2LE();
 		};
 		class CP1251 : public _encoding {
 			friend encoding;
 		public:
-			CP1251();
-			~CP1251();
+			CHARLIBDLL_API CP1251();
+			CHARLIBDLL_API ~CP1251();
 		};
 		class CP866 : public _encoding {
 			friend encoding;
 			CP866(const CP866 &src);
 			virtual chlib::EncChar encodedToEncChar(const byte* const _Source, size_t &_SrcOffset) const;
 		public:
-			CP866();
-			~CP866();
+			CHARLIBDLL_API CP866();
+			CHARLIBDLL_API ~CP866();
 		};
 	};
-	std::basic_ostream<char>& CHARLIBDLL_API operator<<(std::basic_ostream<char>&, const char* const);
+	CHARLIBDLL_API extern const enc::_encoding *const *const Encodings;
+	//std::basic_ostream<char>& CHARLIBDLL_API operator<<(std::basic_ostream<char>&, const char* const);
 };

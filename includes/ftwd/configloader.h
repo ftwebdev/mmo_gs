@@ -12,7 +12,7 @@
 #include <string>
 #include <map>
 #include "ftwd/global.h"
-#include "tpl/glob.h"
+#include "tpl/global.h"
 
 namespace ftwd {
 	CONFIGLOADERDLL_API std::map<std::string, std::string> getConfig(const std::string _CfgName);

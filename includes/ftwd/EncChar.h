@@ -1,7 +1,16 @@
 #pragma once
-
+#include "ftwd/global.h"
 #include "ftwd/enctypes.h"
-#include "tpl/glob.h"
+
+#ifdef _WIN32
+	#ifdef CHARLIBDLL_EXPORT
+		#define CHARLIBDLL_API __declspec(dllexport)
+	#elif _WIN32
+		#define CHARLIBDLL_API __declspec(dllexport)
+	#endif // !CHARLIBDLL_EXPORT
+#else
+	#define CHARLIBDLL_API
+#endif // !_WIN32
 
 namespace ftwd {
 	namespace chlib {
@@ -17,21 +26,21 @@ namespace ftwd {
 			byte lPos;
 			byte _ETS;
 			dword _char;
-			EncChar();
-			EncChar(byte const * const _Array, size_t &pos, byte const _Libpos);
-			byte* dataref() const;
-			EncChar& clear();
-			EncChar& parse(byte const * const _Array, size_t &pos, byte const _Libpos);
-			enctypes type() const;
-			byte size() const;
-			char* const toString(char * const _Dest, size_t &_DestPos) const;
-			EncChar& operator=(EncChar const &_Other);
-			FILE* operator>>(FILE* const Cpp) const;
-			std::basic_ostream<char>& operator>>(std::basic_ostream<char> &stream) const;
-			bool operator==(EncChar const &_Other) const;
-			bool operator!=(EncChar const &_Other) const;
-			operator unsigned short() const;
-			operator unsigned long() const;
+			CHARLIBDLL_API EncChar();
+			CHARLIBDLL_API EncChar(byte const * const _Array, size_t &pos, byte const _Libpos);
+			CHARLIBDLL_API byte* dataref() const;
+			CHARLIBDLL_API EncChar& clear();
+			CHARLIBDLL_API EncChar& parse(byte const * const _Array, size_t &pos, byte const _Libpos);
+			CHARLIBDLL_API enctypes type() const;
+			CHARLIBDLL_API byte size() const;
+			CHARLIBDLL_API char* const toString(char * const _Dest, size_t &_DestPos) const;
+			CHARLIBDLL_API EncChar& operator=(EncChar const &_Other);
+			CHARLIBDLL_API FILE* operator>>(FILE* const Cpp) const;
+			CHARLIBDLL_API std::basic_ostream<char>& operator>>(std::basic_ostream<char> &stream) const;
+			CHARLIBDLL_API bool operator==(EncChar const &_Other) const;
+			CHARLIBDLL_API bool operator!=(EncChar const &_Other) const;
+			CHARLIBDLL_API operator unsigned short() const;
+			CHARLIBDLL_API operator unsigned long() const;
 		};
 	}
 }

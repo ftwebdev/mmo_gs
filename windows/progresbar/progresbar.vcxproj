@@ -143,18 +143,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\includes\ftwd\progressbar.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\lib\progresbar\progressbar.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\exception\exception.vcxproj">
       <Project>{c8443e8b-c65c-4786-ad2e-11c4ad20c5cd}</Project>
     </ProjectReference>
     <ProjectReference Include="..\global\global.vcxproj">
       <Project>{de0f3094-d569-429a-a3c7-c79674f9cedb}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\lib\progresbar\progresbar.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\includes\ftwd\progresbar.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,11 +1,10 @@
 ﻿  global.cpp
-d:\workspace\mmo_gs\includes\tpl\global.h(354): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1772): note:  см. объявление "sprintf"
-d:\workspace\mmo_gs\includes\ftwd\global.h(41): warning C4091: __declspec(dllexport): пропускается слева от "ftwd::dlGlobal", когда ни одна переменная не объявлена
-d:\workspace\mmo_gs\includes\ftwd\global.h(94): warning C4091: __declspec(dllexport): пропускается слева от "ftwd::refcounter", когда ни одна переменная не объявлена
-d:\workspace\mmo_gs\includes\ftwd\global.h(168): warning C4521: ftwd::string: заданы несколько конструкторов копии
-d:\workspace\mmo_gs\lib\global\global.cpp(68): warning C4996: 'gmtime': This function or variable may be unsafe. Consider using gmtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+d:\workspace\mmo_gs\includes\ftwd\global.h(47): warning C4091: __declspec(dllexport): пропускается слева от "ftwd::dlGlobal", когда ни одна переменная не объявлена
+d:\workspace\mmo_gs\includes\ftwd\global.h(100): warning C4091: __declspec(dllexport): пропускается слева от "ftwd::refcounter", когда ни одна переменная не объявлена
+d:\workspace\mmo_gs\includes\ftwd\global.h(174): warning C4521: ftwd::string: заданы несколько конструкторов копии
+d:\workspace\mmo_gs\lib\global\global.cpp(18): warning C4267: аргумент: преобразование из "size_t" в "DWORD"; возможна потеря данных
+d:\workspace\mmo_gs\lib\global\global.cpp(73): warning C4996: 'gmtime': This function or variable may be unsafe. Consider using gmtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\time.h(495): note:  см. объявление "gmtime"
-d:\workspace\mmo_gs\lib\global\global.cpp(138): warning C4715: ftwd::global_ns::strpos: значение возвращается не при всех путях выполнения
+d:\workspace\mmo_gs\lib\global\global.cpp(143): warning C4715: ftwd::global_ns::strpos: значение возвращается не при всех путях выполнения
   global.vcxproj -> D:\workspace\mmo_gs\windows\x64\Debug\global.dll
   global.vcxproj -> D:\workspace\mmo_gs\windows\x64\Debug\global.pdb (Partial PDB)

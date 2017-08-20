@@ -1,3 +1,4 @@
+#define CHARLIBDLL_EXPORT
 #include "ftwd/EncChar.h"
 
 namespace ftwd {
@@ -50,14 +51,8 @@ namespace ftwd {
         }
         FILE* EncChar::operator>>(FILE* const Cpp) const {
 			if (Cpp) {
-				char buff[7];
-				fputs("{ ", Cpp);
-				const byte* arr = &lPos;
-				for (byte i = 0; i < EncCharTSize; i++) {
-					fputs(int2hex(buff, arr[i], true, 1), Cpp);
-					fputs(((i < (EncCharTSize - 1)) ? ", " : " "), Cpp);
-				}
-				fputc('}', Cpp);
+				byte sz = size();
+				fwrite(&_char, size(), 1, Cpp);
 			}
 			else {
 				throw(exception(globErrNullFilePtr, "Arg0", "operator>>(FILE* const)", "ftwd::chlib::EncChar"));

@@ -10,16 +10,6 @@ Global templates
 #include "ftwd/types.h"
 #include "ftwd/exception.h"
 
-/* template class used as 'nullptr' */
-class _null {
-public:
-	template<typename T>
-	operator T*() {
-		return 0;
-	}
-};
-_null null;
-
 namespace ftwd {
 	
 	/* namespace used for not secure functions */
@@ -51,7 +41,7 @@ namespace ftwd {
 	namespace global_ns {
 		template<typename T>
 		T* dcopy(const T* const _Src, const size_t _Len) {
-			T* buff = new T[_Len + 1];
+			buff = new T[_Len + 1];
 			for (size_t i = 0; i < _Len; i++)
 				buff[i] = _Src[i];
 			buff[_Len] = 0;
@@ -62,11 +52,11 @@ namespace ftwd {
 	T* dcopy(const T* const _Src, const size_t _Len = 0) {
 		T* buff = nullptr;
 		if (_Src) {
-			size_t len = (_Len ? _Len : global_ns::strlen(_Src));
-			T* buff = new T[_Len + 1];
-			for (size_t i = 0; i < _Len; i++)
+			size_t len = (_Len != 0 ? _Len : global_ns::strlen(_Src));
+			buff = new T[len + 1];
+			for (size_t i = 0; i < len; i++)
 				buff[i] = _Src[i];
-			buff[_Len] = 0;
+			buff[len] = 0;
 		}
 		return buff;
 	}
@@ -317,74 +307,6 @@ namespace ftwd {
         return (typecmp<double>(_Var) || typecmp<float>(_Var));
     }
     /* End of typecmp */
-	
-	/* type to string */
-	namespace global_ns {
-		template<typename T>
-		const char* const int2str(char* const _Dest, const T _Value, size_t _Prec = 0) {
-			size_t digits = 0;
-			T tVal = _Value;
-			do {
-				++digits;
-			} while (tVal /= 10);
-			if (digits < _Prec) digits = _Prec;
-			char* dest = _Dest;
-			tVal = _Value;
-			if (tVal < 0) {
-				tVal = -tVal;
-				*(dest++) = '-';
-			}
-			dest[digits] = 0;
-			while (digits) {
-				dest[--digits] = (tVal % 10) + '0';
-				tVal /= 10;
-			}
-			return _Dest;
-		}
-		const char* const dbl2str(char* const _Dest, const double _Value, size_t _Prec = 0) {
-			char mask[] = { '%', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-			byte mskPos = 1;
-			if (_Prec) {
-				mask[mskPos++] = '.';
-				mask[mskPos++] = ((_Prec % 100) / 10) + '0';
-				mask[mskPos++] = (_Prec % 10) + '0';
-			}
-			mask[mskPos++] = 'f';
-			mask[mskPos] = 0;
-			sprintf(_Dest, mask, _Value);
-			return _Dest;
-		}
-	}
-    template<typename T>
-    const char * const type2str(char* _Dest, T const &_Value, size_t _Prec = 0) {
-        if (_Dest) {
-            global_ns::int2str(_Dest, _Value, _Prec);
-        }
-        else {
-            throw(exception(globErrInvalidValueType, nullptr, "etype2str<T>"));
-        }
-        return _Dest;
-    }
-	template<>
-	const char * const type2str<double>(char* _Dest, const double &_Value, size_t _Prec) {
-		if (_Dest) {
-			global_ns::dbl2str(_Dest, _Value, _Prec);
-		}
-		else {
-			throw(exception(globErrInvalidValueType, nullptr, "etype2str<T>"));
-		}
-		return _Dest;
-	}
-	template<>
-	const char * const type2str<float>(char* _Dest, const float &_Value, size_t _Prec) {
-		if (_Dest) {
-			global_ns::dbl2str(_Dest, _Value, _Prec);
-		}
-		else {
-			throw(exception(globErrInvalidValueType, nullptr, "etype2str<T>"));
-		}
-		return _Dest;
-	}
 	
 	/* cstrings deep compare */
 	namespace global_ns {

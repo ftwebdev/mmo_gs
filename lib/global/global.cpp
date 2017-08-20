@@ -13,6 +13,11 @@
 #endif //_WIN32
 
 namespace ftwd {
+#ifdef _WIN32
+	void sleep(size_t i) {
+		Sleep(i * 1000);
+	}
+#endif //_WIN32
 	/************************ Global enums, flags, types and constants ************************/
 	/* a definition of class dlGlobal */
 	

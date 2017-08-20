@@ -1,23 +1,42 @@
-﻿  progressbar.cpp
+﻿  progresbar.cpp
 d:\workspace\mmo_gs\includes\tpl\global.h(354): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1772): note:  см. объявление "sprintf"
+d:\workspace\mmo_gs\includes\tpl\global.h(549): warning C4267: аргумент: преобразование из "size_t" в "ftwd::DWORD"; возможна потеря данных
 d:\workspace\mmo_gs\includes\ftwd\global.h(41): warning C4091: __declspec(dllimport): пропускается слева от "ftwd::dlGlobal", когда ни одна переменная не объявлена
 d:\workspace\mmo_gs\includes\ftwd\global.h(94): warning C4091: __declspec(dllimport): пропускается слева от "ftwd::refcounter", когда ни одна переменная не объявлена
 d:\workspace\mmo_gs\includes\ftwd\global.h(168): warning C4521: ftwd::string: заданы несколько конструкторов копии
-d:\workspace\mmo_gs\includes\ftwd\progressbar.h(29): warning C4091: __declspec(dllexport): пропускается слева от "ftwd::BarCfg", когда ни одна переменная не объявлена
-d:\workspace\mmo_gs\includes\ftwd\progressbar.h(66): warning C4091: __declspec(dllexport): пропускается слева от "ftwd::progressbar", когда ни одна переменная не объявлена
-d:\workspace\mmo_gs\lib\progresbar\progressbar.cpp(101): warning C4267: аргумент: преобразование из "size_t" в "unsigned int"; возможна потеря данных
-d:\workspace\mmo_gs\lib\progresbar\progressbar.cpp(116): warning C4244: аргумент: преобразование "__int64" в "unsigned int", возможна потеря данных
-d:\workspace\mmo_gs\lib\progresbar\progressbar.cpp(119): warning C4267: аргумент: преобразование из "size_t" в "unsigned int"; возможна потеря данных
-d:\workspace\mmo_gs\lib\progresbar\progressbar.cpp(101): warning C4996: 'write': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _write. See online help for details.
+d:\workspace\mmo_gs\includes\ftwd\progresbar.h(29): warning C4091: __declspec(dllexport): пропускается слева от "ftwd::BarCfg", когда ни одна переменная не объявлена
+d:\workspace\mmo_gs\lib\progresbar\progresbar.cpp(35): warning C4244: инициализация: преобразование "const ::size_t" в "double", возможна потеря данных
+d:\workspace\mmo_gs\lib\progresbar\progresbar.cpp(81): warning C4244: =: преобразование "double" в "ftwd::byte", возможна потеря данных
+d:\workspace\mmo_gs\lib\progresbar\progresbar.cpp(102): warning C4267: аргумент: преобразование из "size_t" в "unsigned int"; возможна потеря данных
+d:\workspace\mmo_gs\lib\progresbar\progresbar.cpp(116): warning C4244: аргумент: преобразование "__int64" в "unsigned int", возможна потеря данных
+d:\workspace\mmo_gs\lib\progresbar\progresbar.cpp(118): warning C4244: аргумент: преобразование "__int64" в "unsigned int", возможна потеря данных
+d:\workspace\mmo_gs\lib\progresbar\progresbar.cpp(121): warning C4244: аргумент: преобразование "__int64" в "unsigned int", возможна потеря данных
+d:\workspace\mmo_gs\lib\progresbar\progresbar.cpp(125): warning C4244: аргумент: преобразование "__int64" в "unsigned int", возможна потеря данных
+d:\workspace\mmo_gs\lib\progresbar\progresbar.cpp(127): warning C4244: аргумент: преобразование "__int64" в "unsigned int", возможна потеря данных
+d:\workspace\mmo_gs\lib\progresbar\progresbar.cpp(131): warning C4267: аргумент: преобразование из "size_t" в "unsigned int"; возможна потеря данных
+d:\workspace\mmo_gs\lib\progresbar\progresbar.cpp(102): warning C4996: 'write': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _write. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\corecrt_io.h(558): note:  см. объявление "write"
-d:\workspace\mmo_gs\lib\progresbar\progressbar.cpp(102): warning C4996: 'write': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _write. See online help for details.
+d:\workspace\mmo_gs\lib\progresbar\progresbar.cpp(103): warning C4996: 'write': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _write. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\corecrt_io.h(558): note:  см. объявление "write"
-d:\workspace\mmo_gs\lib\progresbar\progressbar.cpp(110): warning C4996: 'write': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _write. See online help for details.
+d:\workspace\mmo_gs\lib\progresbar\progresbar.cpp(108): warning C4996: 'write': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _write. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\corecrt_io.h(558): note:  см. объявление "write"
-d:\workspace\mmo_gs\lib\progresbar\progressbar.cpp(116): warning C4996: 'write': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _write. See online help for details.
+d:\workspace\mmo_gs\lib\progresbar\progresbar.cpp(116): warning C4996: 'write': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _write. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\corecrt_io.h(558): note:  см. объявление "write"
-d:\workspace\mmo_gs\lib\progresbar\progressbar.cpp(119): warning C4996: 'write': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _write. See online help for details.
+d:\workspace\mmo_gs\lib\progresbar\progresbar.cpp(118): warning C4996: 'write': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _write. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\corecrt_io.h(558): note:  см. объявление "write"
+d:\workspace\mmo_gs\lib\progresbar\progresbar.cpp(121): warning C4996: 'write': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _write. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\corecrt_io.h(558): note:  см. объявление "write"
+d:\workspace\mmo_gs\lib\progresbar\progresbar.cpp(123): warning C4996: 'write': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _write. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\corecrt_io.h(558): note:  см. объявление "write"
+d:\workspace\mmo_gs\lib\progresbar\progresbar.cpp(125): warning C4996: 'write': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _write. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\corecrt_io.h(558): note:  см. объявление "write"
+d:\workspace\mmo_gs\lib\progresbar\progresbar.cpp(127): warning C4996: 'write': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _write. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\corecrt_io.h(558): note:  см. объявление "write"
+d:\workspace\mmo_gs\lib\progresbar\progresbar.cpp(131): warning C4996: 'write': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _write. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\corecrt_io.h(558): note:  см. объявление "write"
+d:\workspace\mmo_gs\lib\progresbar\progresbar.cpp(134): warning C4244: =: преобразование "const ::size_t" в "double", возможна потеря данных
+d:\workspace\mmo_gs\lib\progresbar\progresbar.cpp(144): warning C4244: =: преобразование "const ::size_t" в "double", возможна потеря данных
+d:\workspace\mmo_gs\lib\progresbar\progresbar.cpp(145): warning C4244: =: преобразование "::size_t" в "double", возможна потеря данных
   progresbar.vcxproj -> D:\workspace\mmo_gs\windows\x64\Debug\progresbar.dll
   progresbar.vcxproj -> D:\workspace\mmo_gs\windows\x64\Debug\progresbar.pdb (Partial PDB)

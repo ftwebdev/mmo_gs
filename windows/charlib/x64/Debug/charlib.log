@@ -1,0 +1,7 @@
+﻿  encoding.cpp
+d:\workspace\mmo_gs\includes\ftwd\global.h(47): warning C4091: __declspec(dllimport): пропускается слева от "ftwd::dlGlobal", когда ни одна переменная не объявлена
+d:\workspace\mmo_gs\includes\ftwd\global.h(100): warning C4091: __declspec(dllimport): пропускается слева от "ftwd::refcounter", когда ни одна переменная не объявлена
+d:\workspace\mmo_gs\includes\ftwd\global.h(174): warning C4521: ftwd::string: заданы несколько конструкторов копии
+d:\workspace\mmo_gs\lib\charlib\encoding.cpp(126): warning C4312: приведение типов: преобразование из "dword" в "byte *" большего размера
+  charlib.vcxproj -> D:\workspace\mmo_gs\windows\x64\Debug\charlib.dll
+  charlib.vcxproj -> D:\workspace\mmo_gs\windows\x64\Debug\charlib.pdb (Partial PDB)

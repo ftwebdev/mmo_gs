@@ -1,13 +1,49 @@
-#define CHARLIBDLL_EXPORT
 #include "ftwd/encoding.h"
 namespace ftwd {
-	errcodes encoding::convert(enctypes _Curr, enctypes _Tgt, byte* &_SrcStr, size_t &TotalBytes, bool addMarker) const {
-		
-
-	}
-
 	namespace enc {
+		_encoding _unknown;
+		UTF8 _utf8;
+		UCS2BE _ucs2be;
+		UCS2LE _ucs2le;
+		CP1251 _cp1251;
+		CP866 _cp866;
 
+		_encoding * const encs[] = {
+			&_unknown,
+			&_utf8,
+			&_ucs2be,
+			&_ucs2le,
+			&_cp1251,
+			&_cp866
+		};
+	}
+	const enc::_encoding *const *const Encodings = enc::encs;
+
+	errcodes encoding::convert(enctypes _Curr, enctypes _Tgt, byte* &_SrcStr, size_t &TotalBytes, bool addMarker) {
+		byte* result = nullptr;
+		size_t btsz = TotalBytes;
+		if (_Curr <= EncLatinOnly) {
+			size_t nsize = Encodings[_Curr]->countEncCharBufferSize(_SrcStr, TotalBytes);
+			chlib::EncChar* src = new chlib::EncChar[nsize + 1];
+			src[nsize] = chlib::CharLib[_Tgt][0];
+			size_t offset = 0;
+			for (size_t i = 0; i < nsize; i++) {
+				src[i] = (chlib::convertByType(_Tgt, _Curr, (enc::encs[_Curr]->encodedToEncChar(_SrcStr, offset)._char)));
+				btsz += src[i].size();
+			}
+			btsz += src[nsize].size();
+			result = new byte[btsz];
+			size_t rstpos = 0;
+			for (size_t i = 0; i <= nsize; i++) {
+				src[i].toString((char*)result, rstpos);
+			}
+			delete[] _SrcStr;
+			_SrcStr = result;
+			TotalBytes = btsz - src[nsize].size();
+		}
+		return (ConvErrEncodingUndefined);
+	}
+	namespace enc {
 		const qword EncMarkers[] = {
 			0,				/* EncUnknown */
 			0xbfbbef,		/* EncUTF8 */
@@ -48,7 +84,10 @@ namespace ftwd {
 			}
 			throw(exception(globErrNullFilePtr, "Arg0", "addBOM", "_encoding"));
 		}
-		_encoding::_encoding(const enctypes _type = EncUnknown)
+		_encoding::_encoding()
+			: _type(EncUnknown)
+		{}
+		_encoding::_encoding(const enctypes _type)
 			: _type(_type)
 		{}
 		_encoding::~_encoding() {

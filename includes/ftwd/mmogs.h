@@ -3,6 +3,8 @@
 #include <random>
 #include <ctime>
 #include "ftwd/global.h"
+#include "ftwd/progresbar.h"
+#include "ftwd/encoding.h"
 
 #ifdef _WIN32
 	#include <Windows.h>

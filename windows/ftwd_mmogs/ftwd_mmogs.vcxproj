@@ -153,6 +153,9 @@
     <ClInclude Include="..\..\lib\progresbar\win.h" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\charlib\charlib.vcxproj">
+      <Project>{009b7d0f-2944-4939-9b5c-5ecc2ba00699}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\exception\exception.vcxproj">
       <Project>{c8443e8b-c65c-4786-ad2e-11c4ad20c5cd}</Project>
     </ProjectReference>

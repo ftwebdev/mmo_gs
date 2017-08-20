@@ -1,16 +1,20 @@
 #include "ftwd/mmogs.h"
-#include "ftwd/progressbar.h"
 #include <iostream>
+#include <io.h>
 
 int main(){
 	using namespace ftwd;
-	const char testMsg[] = { "Hello World!\n" };
-	size_t size = 100;
-	progressbar bar(size, testMsg);
-	for (size_t i = 0; i < size; i++) {
-		sleep(1);
-		bar.now(i);
+	const char testMsg[] = { "Привет, Мир!\n" };
+	byte* test = (byte*)dcopy(testMsg);
+	size_t len = strlen(test);
+	encoding::convert(EncCP1251, EncUTF8, test, len, false);
+	FILE* file = fopen("enctest.txt", "wb");
+	if (!file) {
+		std::cout << "Can't open enctest.txt\n";
 	}
+	int fd = fileno(file);
+	write(fd, test, len);
+	fclose(file);
 #ifdef _WIN32
     system("pause");
 #endif

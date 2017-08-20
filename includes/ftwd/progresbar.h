@@ -28,16 +28,16 @@ namespace ftwd {
 		~BarCfg();
 	};
 
-	PROGRESSBARDLL_API class progressbar {
+	class progressbar {
 		// conting offset (total units count)
-		size_t total;
+		double total;
 		// one percent size in units
-		size_t PercentSize;
-		size_t BlockSize;
+		double PercentSize;
+		double BlockSize;
 		// curent unit
-		size_t CurUnit;
-		size_t NextPercent;
-		size_t NextBlock;
+		double CurUnit;
+		double NextPercent;
+		double NextBlock;
 		// message(will be displayed before progressbar)
 		char* Msg;
 		// char buffer(will be displayed)
@@ -58,10 +58,10 @@ namespace ftwd {
 		void init();
 		void clear();
     public:
-		explicit progressbar(const size_t total, const char* const Msg = nullptr, const BarCfg* const _Cfg = nullptr);
-        ~progressbar();
-		void now(size_t i);
-        void reset(const size_t total, const char* const Msg = nullptr);
-        void clearout();
+		PROGRESSBARDLL_API explicit progressbar(const size_t total, const char* const Msg = nullptr, const BarCfg* const _Cfg = nullptr);
+		PROGRESSBARDLL_API ~progressbar();
+		PROGRESSBARDLL_API void now(size_t i);
+		PROGRESSBARDLL_API void reset(const size_t total, const char* const Msg = nullptr);
+		PROGRESSBARDLL_API void clearout();
     };
 };

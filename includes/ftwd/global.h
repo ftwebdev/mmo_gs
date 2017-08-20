@@ -10,15 +10,15 @@
 #include <ctime>
 
 #ifdef _WIN32
-#ifdef GLOBALDLL_EXPORT
-#define GLOBALDLL_API __declspec(dllexport)
-#elif _WIN32
-#define GLOBALDLL_API __declspec(dllimport)
-#endif // !EXCEPTIONDLL_EXPORT
+	#ifdef GLOBALDLL_EXPORT
+		#define GLOBALDLL_API __declspec(dllexport)
+	#elif _WIN32
+		#define GLOBALDLL_API __declspec(dllimport)
+	#endif // !GLOBALDLL_EXPORT
 #else
-#define GLOBALDLL_API
-
+	#define GLOBALDLL_API
 #endif // _WIN32
+
 // Global typedef
 #include "types.h"
 // All enums used in current project enums
@@ -29,6 +29,12 @@
 #include "tpl/BaseDynamicBuffer.h"
 
 namespace ftwd {
+#ifdef _WIN32
+	GLOBALDLL_API void sleep(size_t i);
+#else
+	#include <unistd.h>
+#endif //_WIN32
+
 	/************************ Global enums, flags, types and constants ************************/
 	GLOBALDLL_API struct dlGlobal {
 		static const byte DSlash;	// '//'
@@ -187,4 +193,5 @@ namespace ftwd {
 		C_White
 	};
 	void GLOBALDLL_API setConsTextColor(const conscolor _Color);
-}
+
+};

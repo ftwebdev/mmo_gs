@@ -27,11 +27,11 @@ namespace ftwd {
             *const LibCP866
         ;
         // much costable by time and resources function that search characters in lib
-        static EncChar convert(const eCharLib _TypeOut, const EncChar &_SrcChar);
+		CHARLIBDLL_API EncChar convert(const enctypes _TypeOut, const EncChar &_SrcChar);
         // get position of char and convert to other type
-        static EncChar convertByType(const enctypes _TypeOut, const enctypes _TypeIn, const dword iChar);
+		CHARLIBDLL_API EncChar convertByType(const enctypes _TypeOut, const enctypes _TypeIn, const dword iChar);
         // get char from type and position
-        static EncChar convertByPos(const enctypes _TypeOut, const byte _LPos);
+		CHARLIBDLL_API EncChar convertByPos(const enctypes _TypeOut, const byte _LPos);
     }
 }
 

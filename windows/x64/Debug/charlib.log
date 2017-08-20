@@ -1,0 +1,37 @@
+﻿  encoding.cpp
+d:\workspace\mmo_gs\includes\tpl\global.h(354): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1772): note:  см. объявление "sprintf"
+d:\workspace\mmo_gs\includes\tpl\global.h(549): warning C4267: аргумент: преобразование из "size_t" в "ftwd::DWORD"; возможна потеря данных
+d:\workspace\mmo_gs\includes\ftwd\global.h(41): warning C4091: __declspec(dllimport): пропускается слева от "ftwd::dlGlobal", когда ни одна переменная не объявлена
+d:\workspace\mmo_gs\includes\ftwd\global.h(94): warning C4091: __declspec(dllimport): пропускается слева от "ftwd::refcounter", когда ни одна переменная не объявлена
+d:\workspace\mmo_gs\includes\ftwd\global.h(168): warning C4521: ftwd::string: заданы несколько конструкторов копии
+d:\workspace\mmo_gs\lib\charlib\encoding.cpp(126): warning C4312: приведение типов: преобразование из "dword" в "ftwd::byte *" большего размера
+  EncChar.cpp
+d:\workspace\mmo_gs\includes\tpl\global.h(354): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1772): note:  см. объявление "sprintf"
+d:\workspace\mmo_gs\includes\tpl\global.h(549): warning C4267: аргумент: преобразование из "size_t" в "ftwd::DWORD"; возможна потеря данных
+d:\workspace\mmo_gs\includes\ftwd\global.h(41): warning C4091: __declspec(dllimport): пропускается слева от "ftwd::dlGlobal", когда ни одна переменная не объявлена
+d:\workspace\mmo_gs\includes\ftwd\global.h(94): warning C4091: __declspec(dllimport): пропускается слева от "ftwd::refcounter", когда ни одна переменная не объявлена
+d:\workspace\mmo_gs\includes\ftwd\global.h(168): warning C4521: ftwd::string: заданы несколько конструкторов копии
+  CharLib.cpp
+d:\workspace\mmo_gs\includes\tpl\global.h(354): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1772): note:  см. объявление "sprintf"
+d:\workspace\mmo_gs\includes\tpl\global.h(549): warning C4267: аргумент: преобразование из "size_t" в "ftwd::DWORD"; возможна потеря данных
+d:\workspace\mmo_gs\includes\ftwd\global.h(41): warning C4091: __declspec(dllimport): пропускается слева от "ftwd::dlGlobal", когда ни одна переменная не объявлена
+d:\workspace\mmo_gs\includes\ftwd\global.h(94): warning C4091: __declspec(dllimport): пропускается слева от "ftwd::refcounter", когда ни одна переменная не объявлена
+d:\workspace\mmo_gs\includes\ftwd\global.h(168): warning C4521: ftwd::string: заданы несколько конструкторов копии
+d:\workspace\mmo_gs\lib\charlib\libcp1251.h(95): warning C4838: преобразование из "int" в "const char" требует сужающего преобразования
+d:\workspace\mmo_gs\lib\charlib\libcp1251.h(95): warning C4309: инициализация: усечение константного значения
+  Создание кода...
+EncChar.obj : error LNK2005: "char const * __cdecl ftwd::type2str<float>(char *,float const &,unsigned __int64)" (??$type2str@M@ftwd@@YAQEBDPEADAEBM_K@Z) уже определен в CharLib.obj
+EncChar.obj : error LNK2005: "char const * __cdecl ftwd::type2str<double>(char *,double const &,unsigned __int64)" (??$type2str@N@ftwd@@YAQEBDPEADAEBN_K@Z) уже определен в CharLib.obj
+EncChar.obj : error LNK2005: "char const * __cdecl ftwd::global_ns::dbl2str(char * const,double,unsigned __int64)" (?dbl2str@global_ns@ftwd@@YAQEBDQEADN_K@Z) уже определен в CharLib.obj
+EncChar.obj : error LNK2005: "void __cdecl ftwd::sleep(unsigned __int64)" (?sleep@ftwd@@YAX_K@Z) уже определен в CharLib.obj
+EncChar.obj : error LNK2005: "class _null null" (?null@@3V_null@@A) уже определен в CharLib.obj
+encoding.obj : error LNK2005: "char const * __cdecl ftwd::type2str<float>(char *,float const &,unsigned __int64)" (??$type2str@M@ftwd@@YAQEBDPEADAEBM_K@Z) уже определен в CharLib.obj
+encoding.obj : error LNK2005: "char const * __cdecl ftwd::type2str<double>(char *,double const &,unsigned __int64)" (??$type2str@N@ftwd@@YAQEBDPEADAEBN_K@Z) уже определен в CharLib.obj
+encoding.obj : error LNK2005: "char const * __cdecl ftwd::global_ns::dbl2str(char * const,double,unsigned __int64)" (?dbl2str@global_ns@ftwd@@YAQEBDQEADN_K@Z) уже определен в CharLib.obj
+encoding.obj : error LNK2005: "void __cdecl ftwd::sleep(unsigned __int64)" (?sleep@ftwd@@YAX_K@Z) уже определен в CharLib.obj
+encoding.obj : error LNK2005: "class _null null" (?null@@3V_null@@A) уже определен в CharLib.obj
+     Создается библиотека D:\workspace\mmo_gs\windows\x64\Debug\charlib.lib и объект D:\workspace\mmo_gs\windows\x64\Debug\charlib.exp
+D:\workspace\mmo_gs\windows\x64\Debug\charlib.dll : fatal error LNK1169: обнаружен многократно определенный символ - один или более
