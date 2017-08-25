@@ -169,6 +169,18 @@ namespace ftwd {
 			}
 			return -1;
 		}
+		long long lastof(const char* _Src, const char* _Chars, const size_t offset = 0, const size_t _SrcLen = strlen(_Src), const size_t _ChLen = strlen(_Chars)) {
+			size_t srcPos = _SrcLen - _offset - _ChLen;
+			do {
+				--srcPos;
+				for (size_t j = 0; j < _ChLen; j++) {
+					if (_Src[srcPos] == _Chars[j]) {
+						return srcPos;
+					}
+				}
+			} while(srcPos != 0);
+			return -1;
+		}
 		// _Src != _Tpl != nullptr
 		long long firstof_ue(const char* const _Src, const size_t _SrcLen, const char* const _Tpl, const size_t _SrcOff, const char _Esc = '\\') {
 			size_t tplSize = strlen(_Tpl);
